@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:meal_timer/homepage.dart';
+import 'package:meal_timer/timerpage.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
-    
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Mindful Meal Timer'),
+        ),
+        body:
+            const MyHomePage(), // Use HomePage as the initial content of the body
+      ),
     );
   }
 }
-
